@@ -30,6 +30,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'rails_12factor'
 gem 'bigdecimal', '1.3.5'
 gem 'line-bot-api'
 gem 'slack-ruby-client'
