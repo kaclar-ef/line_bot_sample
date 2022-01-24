@@ -30,5 +30,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'bigdecimal', '1.3.5'
 gem 'line-bot-api'
 gem 'slack-ruby-client'
