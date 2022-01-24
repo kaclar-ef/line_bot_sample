@@ -12,7 +12,7 @@ class WebhookController < ApplicationController
       error 400 do 'Bad Request' end
     end
 
-    evants = line_client.parse_events_from(body)
+    events = line_client.parse_events_from(body)
     events.each do |event|
     puts 'hello'
       # case event
