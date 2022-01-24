@@ -4,7 +4,7 @@ class WebhookController < ApplicationController
   protect_from_forgery :except => [:callback]
 
   def callback
-    # body = request.body.read
+    body = request.body.read
     # signature = request.env['HTTP_X_LINE_SIGNATURE']
 
     # # リクエストがLINEのプラットフォームから送られたことを検証
