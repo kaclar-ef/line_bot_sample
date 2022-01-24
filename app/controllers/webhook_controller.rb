@@ -37,7 +37,7 @@ class WebhookController < ApplicationController
       #     post_message('スタンプが送信されました')
       #   end
       # end
-    end
+    # end
     
     head :ok
   end
