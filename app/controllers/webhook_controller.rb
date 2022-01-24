@@ -65,7 +65,7 @@ class WebhookController < ApplicationController
     # end
   
     # Don't forget to return a successful response
-    "OK"
+    head :ok
   end
 
   private
