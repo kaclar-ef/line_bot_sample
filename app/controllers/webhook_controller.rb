@@ -13,7 +13,7 @@ class WebhookController < ApplicationController
     end
 
     evants = line_client.parse_events_from(body)
-    # events.each do |event|
+    events.each do |event|
     #   case event
     #   when Line::Bot::Event::Message
     #     case event.type
@@ -36,7 +36,8 @@ class WebhookController < ApplicationController
     #       post_message('スタンプが送信されました')
     #     end
     #   end
-    # end
+    puts "hello"
+    end
     
     head :ok
   end
