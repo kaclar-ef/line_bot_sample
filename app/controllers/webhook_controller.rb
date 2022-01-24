@@ -5,14 +5,14 @@ class WebhookController < ApplicationController
 
   def callback
     body = request.body.read
-    # signature = request.env['HTTP_X_LINE_SIGNATURE']
+    signature = request.env['HTTP_X_LINE_SIGNATURE']
 
-    # # リクエストがLINEのプラットフォームから送られたことを検証
-    # unless line_client.validate_signature(body, signature)
-    #   error 400 do 'Bad Request' end
-    # end
+    # リクエストがLINEのプラットフォームから送られたことを検証
+    unless line_client.validate_signature(body, signature)
+      error 400 do 'Bad Request' end
+    end
 
-    # evants = line_client.parse_events_from(body)
+    evants = line_client.parse_events_from(body)
     # events.each do |event|
     #   case event
     #   when Line::Bot::Event::Message
