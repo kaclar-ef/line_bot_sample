@@ -43,9 +43,9 @@ class WebhookController < ApplicationController
   private
   def line_client
     @line_client ||= Line::Bot::Client.new do |config|
-      config.channel_id = 1656825122
-      config.channel_secret = '7a3a022d6ab306d97c25c2db0eba9ddb'
-      config.channel_token = 'pqFmVsAQ1Q6vLS583BoAq7moXSnv8tzT5Xbvz/fHoRjy/JMUmB5PeY+BBy6Mhd4+RxpfXVETUxcopcBXn/dRo2kq3YFIK66ukNwgglfYWuFonGmAsazL7cOnjosnKeCpQf0C1EuUzCITbynGqknS8QdB04t89/1O/w1cDnyilFU='
+      config.channel_id = ENV["LINE_CHANNEL_ID"]
+      config.channel_secret = ENV['LINE_CHANNEL_SECRET']
+      config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     end
   end
 
