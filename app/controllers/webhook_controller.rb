@@ -17,7 +17,7 @@ class WebhookController < ApplicationController
       case event
       when Line::Bot::Event::Message
         case event.type
-        when Line::Bot::Event::MeesageType::Text
+        when Line::Bot::Event::MessageType::Text
           post_message(event.message['text'])
         when Line::Bot::Event::MessageType::Image
           image_response = line_client.get_message_content(event.message['id'])
